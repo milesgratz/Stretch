@@ -25,7 +25,7 @@ function New-StretchNotification {
         .LINK
         https://github.com/milesgratz/Stretch
     #>
-	[alias('Stretch')]
+    [alias('Stretch')]
     param
     (
         [Parameter(ParameterSetName = 'Body')]
@@ -77,21 +77,21 @@ function New-StretchNotification {
     }
 
     # CONVERT PLAINTEXT TO NEW TOAST ADAPTIVETEXT OBJECT
-	$TextObjects = @()
+    $TextObjects = @()
     foreach ($Txt in $Text)
     {
-		$TextObj = [Microsoft.Toolkit.Uwp.Notifications.AdaptiveText]::new()
+	$TextObj = [Microsoft.Toolkit.Uwp.Notifications.AdaptiveText]::new()
         $TextObj.Text = $Txt
-		$TextObjects += $TextObj
+	$TextObjects += $TextObj
     }
-	
+    
     # ATTACH TEXT OBJECTS TO NEW GENERIC TOAST OBJECT
     $Binding = [Microsoft.Toolkit.Uwp.Notifications.ToastBindingGeneric]::new()
     $Binding.AppLogoOverride = $Image
-	foreach ($TextObject in $TextObjects)
-	{
-		$Binding.Children.Add($TextObject)
-	}
+    foreach ($TextObject in $TextObjects)
+    {
+    	$Binding.Children.Add($TextObject)
+    }
     
     # ATTACH NEW GENERIC TOAST OBJECT TO TOAST VISUAL OBJECT
     $Visual = [Microsoft.Toolkit.Uwp.Notifications.ToastVisual]::new()
