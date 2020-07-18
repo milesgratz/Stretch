@@ -27,4 +27,4 @@ The [default image](/Images/StretchLogo.png) is licensed by [cliparts.co](http:/
 Largely ~~stolen~~ inspired by Joshua King's [BurntToast](https://github.com/windos/BurntToast) project.  
 
 ## Contact
-* Blog: [serveradventures.com](http://www.serveradventures.com)
+* Blog: <redacted due to my old blog domain has been parked by bad actors>
